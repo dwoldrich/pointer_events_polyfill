@@ -78,7 +78,7 @@
 
         // clicks on labels are special, resolve the INPUT tag it relates to if possible and make that the target
         if($target.prop("tagName") === "LABEL") {
-          if((idAttr = $target.attr("id"))) {
+          if((idAttr = $target.attr("for"))) {
             $target = $("#" + idAttr);
           } else {
             $nestedInput = $target.find("input");
